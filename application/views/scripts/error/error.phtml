@@ -1,0 +1,19 @@
+<h1>Ooops!</h1>
+<h2><?= $this->headerMessage ?></h2>
+<p>If you don't know what caused this, please make a screen capture of this page and send it the application developer!</p>
+
+<?php if (isset($this->exception)) { ?>
+
+<h3>Exception information:</h3>
+<p>
+  <b>Message:</b> <?= $this->exception->getMessage() ?>
+</p>
+
+<h3>Stack trace:</h3>
+<pre><?= $this->exception->getTraceAsString() ?>
+</pre>
+
+<h3>Request Parameters:</h3>
+<pre><?= var_export($this->request->getParams(), true) ?>
+</pre>
+<?php } ?>

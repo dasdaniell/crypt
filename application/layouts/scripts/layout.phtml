@@ -1,0 +1,35 @@
+<?= $this->doctype() . "\n" ?>
+<?php
+$this->headLink()->prependStylesheet($this->myBaseUrl('css/layout.css'));
+$this->headLink()->appendStylesheet($this->myBaseUrl('css/patch.css'));
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <?= $this->headMeta() ?>
+    <?= $this->headTitle() ?>
+    <?= $this->headStyle() ?>
+    <?= $this->headLink() ?>
+    <?= $this->headScript() ?>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="header-menu">
+                <ul>
+                    <li><a href="<?= $this->myBaseUrl('/') ?>">Home</a></li>
+                    <li><a href="<?= $this->myBaseUrl('rooms/') ?>">Rooms</a></li>
+                    <li><a href="<?= $this->myBaseUrl('gallery/') ?>">Gallery</a></li>
+                    <li><a href="<?= $this->myBaseUrl('booking/') ?>">Reservations</a></li>
+                    <li><a href="<?= $this->myBaseUrl('location') ?>">Location</a></li>
+                </ul>
+            </div>
+            <div id="logo">Crypt logo</div>
+        </div>
+        <div id="middle">
+            <?= $this->layout()->content ?>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
